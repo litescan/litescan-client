@@ -1,5 +1,5 @@
 const decode58Check = require("./crypto").decode58Check;
-const {Block, Transaction, Account} = require("../protocol/core/Tron_pb");
+const {Block, Transaction, Account} = require("../protocol/core/Litetokens_pb");
 const google_protobuf_any_pb = require('google-protobuf/google/protobuf/any_pb.js');
 const encodeString = require("../lib/code").encodeString;
 
@@ -38,7 +38,7 @@ function buildTransferContract(message, contractType, typeName) {
 
 function buildTransferTransaction(token, from, to, amount) {
 
-  if (token.toUpperCase() === 'TRX') {
+  if (token.toUpperCase() === 'XLT') {
 
     let transferContract = new TransferContract();
     transferContract.setToAddress(Uint8Array.from(decode58Check(to)));
@@ -153,7 +153,7 @@ function buildAssetIssue(options) {
   contract.setNum(options.num);
   contract.setEndTime(Date.parse(options.endTime));
   contract.setStartTime(Date.parse(options.startTime));
-  contract.setTrxNum(options.trxNum);
+  contract.setXltNum(options.xltNum);
   contract.setDescription(encodeString(options.description));
   contract.setUrl(encodeString(options.url));
   contract.setPublicFreeAssetNetUsage(0);
@@ -179,7 +179,7 @@ function buildAssetIssue(options) {
  * Freeze balance
  *
  * @param address From which address to freze
- * @param amount The amount of TRX to freeze
+ * @param amount The amount of XLT to freeze
  * @param duration Duration in days
  */
 function buildFreezeBalance(address, amount, duration) {

@@ -1,10 +1,10 @@
 <h1 align="center">
-  Tronscan Client
+  Litescan Client
   <br>
 </h1>
 
 <h4 align="center">
-  Node Client for the <a href="https://api.tronscan.org">Tronscan.org API</a>
+  Node Client for the <a href="https://api.litescan.org">Litescan.org API</a>
 </h4>
 
 <p align="center">
@@ -28,13 +28,13 @@
 Install the package
 
 ```bash
-> npm install @tronscan/client
+> npm install litescan-client
 ```
 
 Use the HTTP Client
 
 ```javascript
-import {Client} from "@tronscan/client";
+import {Client} from "litescan-client";
 
 const client = new Client();
 
