@@ -1,6 +1,6 @@
 {
   "name": "litescan-client",
-  "version": "0.2.13",
+  "version": "0.2.14",
   "description": "Litescan API Client",
   "main": "src/index.js",
   "homepage": "https://api.litescan.org/",
